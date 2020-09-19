@@ -1,0 +1,114 @@
+/*Up*/
+.logo{
+	width:100px;
+}
+.left{
+
+}
+.rightPhone{
+	float: right;
+}
+.phone{
+	font-family: AbeeZee;
+	font-size: 18px;
+	color: #EB5017;
+}
+.hat{
+	margin: 12px 22px 20px 8px;
+}
+/*Navigation panel*/
+.bar{
+	margin: 0 8px;
+	padding: 0;
+	
+}
+.navbar{
+	background:#231F20 ;
+	font-family: arial;
+	font-size:14px;
+}
+
+.navbar-nav {
+    width:100%;
+    margin: 0;
+}
+.nav-link{
+	margin:  11px 0;
+}
+.navbar-nav > li {
+    float:none;
+    text-align:center;
+    border-left:0.1x solid #EB5017;
+    border-right:0.1px solid #EB5017;
+}
+.navbar-nav > li:hover{
+	background: #EB5017;
+	color:#ffffff;
+}
+
+/*breadcrumb*/
+.breadcrumb{
+	background-color: #fff;
+	font-family: arial;
+	font-size: 12px;
+	color: #231f20;
+	margin: 16px 0 16px 30px;
+}
+/*Calc*/
+.calc{
+	margin: 16px 0 0 30px;
+	background: #f2f2f2;
+	width: 60%;
+	padding: 0 0 35px 0;
+}
+.conteinerCals{
+	font-family:arial;
+	font-size:14px;
+}
+.radio{
+	margin-right:53px;
+}
+.radio1{
+	margin-right:8px; 
+}
+.calcH1{
+	font-size:30px;
+	margin: 19px 0 0 96px;
+	color:#EB5017;
+}
+.conteinerCalc{
+	display: block;
+}
+.inlineInput{
+	display:flex;
+	
+
+}
+.rightInput{
+	width:124px;
+}
+.leftText{
+	float:right;
+
+}
+.right{
+	margin: 38px 0px 12.5px 0px;
+}
+.left{
+	margin: 38px 29px 12.5px 27px;
+	width:30%;
+}
+.fontResult{
+	font-family:arial;
+	font-size:12px;
+	color: #395306;
+
+}
+.btnResult{
+	margin:0 25px 0 0;
+	background:#b9ef35;
+}
+.divResult{
+	margin:14px 0 0 22px ;
+}
+
