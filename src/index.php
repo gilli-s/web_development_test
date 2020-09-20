@@ -8,16 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
     <title>Test</title>
   </head>
   <body>
-  	<div class="conteiner-fluid hat">
-  		<div class="conteiner">
+  	<div id="contUp" class="container-fluid hat">
 	  		<div class="row">
 	  			<div class="col"><img src="worldBank.png" alt="" class="logo"></div>
 	  			<div class="col"><span class="rightPhone phone">8-800-100-5005<br>+7(3452)522-000</span></div>
 	  		</div>
-  		</div>
   	</div>
 
   	<nav class="navbar navbar-expand-lg navbar-dark bar ">
@@ -56,17 +61,20 @@
   <li class="breadcrumb-item active">Калькулятор</li>
 </ol> 
 <!--Калькулятор-->
- <div class="conteiner calc">
+ <div class="container calc">
  	<h1 class="calcH1">Калькулятор</h1>
  	<form action="calc.php" method="post">
- 		<div class="conteinerCalc">
+ 		<div class="containerCalc">
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Дата оформления вклада</span></div>
-	 			<div class="right"><input class="rightInput" type="date"></div>
+	 			<div class="right"><input class="rightInput" type="text" id="datepicker"></div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Сумма вклада</span></div>
-	 			<div class="right"><input class="rightInput" type="text"></div>
+	 			<div class="right"><input id="r1out" class="rightInput" type="text"></div>
+	 			<div class="rangeSum right"><input id="r1" class="rangecss" type="range" min="1000" max="3000000" ><br>
+	 				<span class="rangeTextCss">1 тыс.руб</span><span class="rangeText rangeTextCss">3 000 000</span>
+	 			</div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Срок вклада</span></div>
@@ -86,7 +94,12 @@
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Сумма пополнения вклада</span></div>
-	 			<div class="right"><input class="rightInput" type="text"></div>
+	 			<div class="right"><input id="r2out" class="rightInput" type="text"></div>
+	 			<div class="rangeFill rangeSum right"><input id="r2" type="range" class="rangecss" min="1000" max="3000000"><br>
+	 				<span class="rangeTextCss">1 тыс.руб</span><span class="rangeText rangeTextCss">3 000 000</span>
+	 			</div>
+
+	 			
 	 		</div>
 	 		<div class="divResult">
 	 			<button type="button" class="btn btn-success btnResult fontResult">Рассчитать</button>
@@ -97,7 +110,7 @@
 </div>
 <!--Footer-->
 <footer id="footercss" class="footer fixed-bottom">
-	<div id="conteinerfooter" class="container">
+	<div id="containerfooter" class="container">
     <a href="#" class="text-muted footertext">Кредитные карты</a>
     <a href="#" class="text-muted footertext">Вклады</a>
     <a href="#" class="text-muted footertext">Дебетовая карта</a>
@@ -108,10 +121,10 @@
 </footer>
 
     
-
+<script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>

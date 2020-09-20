@@ -9,9 +9,10 @@ body {
 .logo{
 	width:100px;
 }
-.left{
-
+#contUp{
+	padding: 0 22px 0 0 ;
 }
+
 .rightPhone{
 	float: right;
 }
@@ -21,6 +22,7 @@ body {
 	color: #EB5017;
 }
 .hat{
+	padding: 0;
 	margin: 12px 22px 20px 8px;
 }
 /*Navigation panel*/
@@ -69,7 +71,7 @@ body {
 	width: 60%;
 	padding: 0 0 35px 0;
 }
-.conteinerCals{
+.containerCals{
 	font-family:arial;
 	font-size:14px;
 }
@@ -84,11 +86,11 @@ body {
 	margin: 19px 0 0 96px;
 	color:#EB5017;
 }
-.conteinerCalc{
+.containerCalc{
 	display: block;
 }
-.inlineInput{
-	display:flex;
+	.inlineInput{
+		display:flex;
 	
 
 }
@@ -100,7 +102,7 @@ body {
 
 }
 .right{
-	margin: 38px 0px 12.5px 0px;
+	margin: 38px 0px 12.5px 20px;
 }
 .left{
 	margin: 38px 29px 12.5px 27px;
@@ -119,6 +121,20 @@ body {
 .divResult{
 	margin:14px 0 0 22px ;
 }
+.rangeSum{
+	
+	width: 200px;
+}
+.rangeText{
+	margin-left:45%;
+}
+.rangeTextCss{
+	font-style:italic;
+	font-size:12px;
+}
+.rangecss{
+	width:100%;
+}
 /*Footer*/
 #footercss{
 	margin: 0 12px 0 10px;
@@ -126,7 +142,7 @@ body {
 	font-family: arial;
 	font-size:12px;
 }
-#conteinerfooter{
+#containerfooter{
 	margin: 13px 61px 31px 40px;
 	color: #ffffff;
 	text-decoration: underline;
