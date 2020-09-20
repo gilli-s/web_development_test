@@ -96,13 +96,14 @@
 	</form>
 </div>
 <!--Footer-->
-<footer class="footer">
-	<div class="container">
-    <span class="text-muted">Кредитные карты</span>
-    <span class="text-muted">Вклады</span>
-    <span class="text-muted">Дебетовая карта</span>
-    <span class="text-muted">Place sticky footer content here.</span>
-    <span class="text-muted">Place sticky footer content here.</span>
+<footer id="footercss" class="footer fixed-bottom">
+	<div id="conteinerfooter" class="container">
+    <a href="#" class="text-muted footertext">Кредитные карты</a>
+    <a href="#" class="text-muted footertext">Вклады</a>
+    <a href="#" class="text-muted footertext">Дебетовая карта</a>
+    <a href="#"  class="text-muted footertext">Страхование</a>
+    <a href="#" class="text-muted footertext">Друзья</a>
+    <a href="#" class="text-muted footertext">Интернет-банк</a>
   </div>
 </footer>
 
