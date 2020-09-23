@@ -63,47 +63,47 @@
 <!--Калькулятор-->
  <div class="container calc">
  	<h1 class="calcH1">Калькулятор</h1>
- 	<form action="calc.php" method="post">
+ 	<form action="calc.php" method="post" name="mainForm">
  		<div class="containerCalc">
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Дата оформления вклада</span></div>
-	 			<div class="right"><input class="rightInput" type="text" id="datepicker"></div>
+	 			<div class="right"><input name="datepicker" onchange="checkDatepicker(this)" class="rightInput" type="text" readonly id="datepicker"></div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Сумма вклада</span></div>
-	 			<div class="right"><input id="r1out" class="rightInput" type="text"></div>
-	 			<div class="rangeSum right"><input id="r1" class="rangecss" type="range" min="1000" max="3000000" ><br>
+	 			<div class="right"><input name="sumDeposit" id="r1out" class="rightInput" onchange="checkSumDeposit(this)" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></div>
+	 			<div class="rangeSum right"><input id="r1" class="rangecss" onchange="checkSumDeposit1(this)" type="range" min="1000" max="3000000" ><br>
 	 				<span class="rangeTextCss">1 тыс.руб</span><span class="rangeText rangeTextCss">3 000 000</span>
 	 			</div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Срок вклада</span></div>
 	 			<div class="right">
-	 				<select class="years rightInput">
-			    <option value="1 год">1 год</option>
-			    <option selected value="2 года">2 года</option>
-			    <option value="3 года">3 года</option>
-			    <option value="4 года">4 года</option>
-			    <option value="5 лет">5 лет</option>
+	 				<select name="termDeposit" class="years rightInput">
+			    <option value="1">1 год</option>
+			    <option selected value="2">2 года</option>
+			    <option value="3">3 года</option>
+			    <option value="4">4 года</option>
+			    <option value="5">5 лет</option>
    			</select>
 	 			</div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Пополнение вклада</span></div>
-	 			<div class="right"><span class="radio"><input class="radio1" name="fill" checked type="radio">Нет</span><span><input name="fill" class="radio1" type="radio">Да</span></div>
+	 			<div class="right"><span class="radio"><input class="radio1" name="fill" value="Нет" checked type="radio">Нет</span><span><input name="fill" value="Да" class="radio1" type="radio">Да</span></div>
 	 		</div>
 	 		<div class="inlineInput">
-	 			<div class="left"><span class="leftText">Сумма пополнения вклада</span></div>
-	 			<div class="right"><input id="r2out" class="rightInput" type="text"></div>
-	 			<div class="rangeFill rangeSum right"><input id="r2" type="range" class="rangecss" min="1000" max="3000000"><br>
+	 			<div class="left"><span class="leftText">Сумма пополнения вклада</span></div> 
+	 			<div class="right"><input id="r2out" name="sumReplenishDeposit" onchange="checkSumReplenishDeposit(this)" class="rightInput" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></div>
+	 			<div class="rangeFill rangeSum right"><input id="r2" type="range" onchange="checkSumReplenishDeposit1(this)" class="rangecss" min="1000" max="3000000"><br>
 	 				<span class="rangeTextCss">1 тыс.руб</span><span class="rangeText rangeTextCss">3 000 000</span>
 	 			</div>
 
 	 			
 	 		</div>
 	 		<div class="divResult">
-	 			<button type="button" class="btn btn-success btnResult fontResult">Рассчитать</button>
-	 			<a class="fontResult">Результат <span></span></a>
+				<input type="submit" disabled value="Рассчитать" id="calculate" name="calc" class="btn btn-success btnResult fontResult">
+	 			<a class="fontResult">Результат: <span class="fontResult" id="resultat"></span></a>
 	 		</div>
  		</div>
 	</form>
