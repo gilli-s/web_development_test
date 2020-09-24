@@ -29,7 +29,7 @@
 				$summ = $summ + ($summ + intval($sumReplenishDeposit) ) * $days0 * ($percent / $daysy )  ;//расчет суммы 
 			}
 		}
-		echo "$summ";
+		echo "$summ";//вывод в скрипт
 		//это если я конечно правильно понял формулировки переменных
 
 /*4.5.1 summn = summn-1 + (summn-1 + summadd)daysn(percent / daysy)
