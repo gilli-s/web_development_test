@@ -56,6 +56,19 @@ function checkSumDeposit1(obj){
 	turnBorder(true , 'sumDeposit');
 }
 
+function checkRadio(obj){
+	if(obj.value == "Нет"){
+		document.mainForm.sumReplenishDeposit.disabled = true;
+		document.mainForm.sumReplenishDeposit1.disabled = true;
+		buttonCheck();
+	}
+	else{
+		document.mainForm.sumReplenishDeposit.disabled = false;
+		document.mainForm.sumReplenishDeposit1.disabled = false;
+		buttonCheck();
+	}
+}
+
 
 function checkSumReplenishDeposit(obj){
 	if(Number(obj.value) >=1000 && Number(obj.value) <= 3000000  ){
@@ -85,7 +98,7 @@ function turnBorder(trig, name) {
 function buttonCheck(){
 	document.mainForm.calc.disabled = false;
 	for(var key in valid){
-		if(!valid[key]) document.mainForm.calc.disabled = true;
+		if(!valid[key] && $('input[name=fill]:checked').val() == "Да") document.mainForm.calc.disabled = true;
 	}
 	
 }
@@ -95,26 +108,15 @@ $(document).ready(function()
 {
 	$('form').submit(function(event) {
   	event.preventDefault();
-  	//debugger;
-  	var _date = ;
-  	var _sumDeposit = ;
-  	var _termDeposit = ;
-  	var _replenishDeposit = 
-  	var _sumReplenishDeposit = ;
-  	//alert($.isNumeric($('#r1out').val()));
-  	//if()
   	 $.ajax({ 
       url: $(this).attr('action'), 
       method: $(this).attr('method'),
-      data: { date: $('#datepicker').val(), 
-	      sumDeposit : $('#r1out').val(), 
-	      termDeposit: $('.years').val(), 
-	      replenishDeposit: $('input[name=fill]:checked').val(),
-	      sumReplenishDeposit: $('#r2out').val()  
+      data: { "date": $('#datepicker').val(), 
+	      "sumDeposit" : $('#r1out').val(), 
+	      "termDeposit": $('.years').val(), 
+	      "replenishDeposit": $('input[name=fill]:checked').val(),
+	      "sumReplenishDeposit": $('#r2out').val()  
 	    },
-      contentType:false,
-      cache:false,
-      processData: false,
        	success: function(data) {
  				alert(data); // Возвращаемые данные выводим в консоль
        } 

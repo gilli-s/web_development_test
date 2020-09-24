@@ -90,12 +90,12 @@
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Пополнение вклада</span></div>
-	 			<div class="right"><span class="radio"><input class="radio1" name="fill" value="Нет" checked type="radio">Нет</span><span><input name="fill" value="Да" class="radio1" type="radio">Да</span></div>
+	 			<div class="right"><span class="radio"><input class="radio1" name="fill" oninput="checkRadio(this)" value="Нет"  type="radio">Нет</span><span><input name="fill" checked oninput="checkRadio(this)" value="Да" class="radio1" type="radio">Да</span></div>
 	 		</div>
 	 		<div class="inlineInput">
 	 			<div class="left"><span class="leftText">Сумма пополнения вклада</span></div> 
 	 			<div class="right"><input id="r2out" name="sumReplenishDeposit" onchange="checkSumReplenishDeposit(this)" class="rightInput" type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></div>
-	 			<div class="rangeFill rangeSum right"><input id="r2" type="range" onchange="checkSumReplenishDeposit1(this)" class="rangecss" min="1000" max="3000000"><br>
+	 			<div class="rangeFill rangeSum right"><input id="r2" type="range" name="sumReplenishDeposit1" onchange="checkSumReplenishDeposit1(this)" class="rangecss" min="1000" max="3000000"><br>
 	 				<span class="rangeTextCss">1 тыс.руб</span><span class="rangeText rangeTextCss">3 000 000</span>
 	 			</div>
 
